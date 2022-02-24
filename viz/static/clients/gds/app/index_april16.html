@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen" />
+
+<style>
+</style>
+
+<div class='container'>
+  <h2>GOV.UK Verify - estimating demographic coverage v1.1</h2>
+  <div id='intro'>
+    <p>This chart summarises the estimated proportion of people in Great Britain who have the combination of evidence and/or technology to be able to verify their identity online using GOV.UK Verify. The chart allows you to see how this changes over time and by various demographic groups.</p>
+  </div>
+  
+  <h3 id='chart-title'></h3>
+  <div id="chart-ui"></div>
+  <div id="charts" class='xdev'>
+    <div id="verify-chart" class='chart'>
+    </div>
+
+    <div id="text-CI">
+      <h5>Confidence Intervals</h4>
+      <p>The confidence intervals show how confident we are that the sample used has the same split by demographic group as the general population. The dot represents the percentage of the ONS sample from that group and the line shows the estimate of that group in the general population (with 95% confidence). Some groups have no line, meaning the sample was designed to represent exactly the group from the general population (which is known).</p>
+    </div>
+
+    <div id="text-follow">
+     <p>Chart based on a representative sample of 1,954 people living in Great Britain conducted by ONS and analysis by Government Digital Service. We will be iterating and improving this analysis as we get more data. For more information please read our blog <a href='http://gds.blog.gov.uk'>here</a>.</p> 
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script> -->
+<!-- <script src="http://lab.interactivethings.com/lib/d3-grid.js"></script> -->
+<!-- <script src="static/lib/d3.v3.min.js"></script> -->
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="static/lib/d3.v3.min.js"></script>
+<script src="static/lib/queue.min.js"></script>
+<script src="static/lib/lodash.min.js"></script>
+
+<script src="static/lib/kcharts.js"></script>
+
+<script src="config/verify_config_april16.js"></script>
+<script src="static/js/verify_main.js"></script>

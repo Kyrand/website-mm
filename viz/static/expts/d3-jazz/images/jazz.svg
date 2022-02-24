@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="539"
+   height="130"
+   id="svg3050"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="jazz.svg">
+  <metadata
+     id="metadata3075">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Music Staff</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3073" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="851"
+     id="namedview3071"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="428.30045"
+     inkscape:cy="-766.8061"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3050" />
+  <title
+     id="title3052">Music Staff</title>
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke:#000000"
+     id="rect3077"
+     width="888.07379"
+     height="379.10168"
+     x="87.861862"
+     y="644.53583" />
+  <g
+     style="fill:#ffffff;stroke:#ffffff"
+     id="g846"
+     transform="matrix(1.1810802,0,0,0.39248715,161.32989,690.21746)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffffff;stroke-width:5.28574991"
+       d="m 85.367645,339.43466 0,89.064"
+       id="path838" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.99273777pt"
+       d="m 85.365029,340.14178 170.769491,0.73575"
+       id="path839" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.9907692pt"
+       d="m 86.803925,362.09265 169.111155,0.74002"
+       id="path840" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3878"
+       d="m 87.527046,383.87665 16.988604,0.069"
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.99138985pt"
+       d="m 85.724445,406.0903 169.632315,0.73868"
+       id="path844" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.99052324pt"
+       d="m 86.443936,427.86238 168.906324,0.74054"
+       id="path845" />
+  </g>
+  <g
+     style="fill:#ffffff;stroke:#ffffff"
+     id="g1981"
+     transform="matrix(0.35598781,0,0,0.34806468,176.12665,819.18194)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 272.8367,137.43527 c 0.0219,8.47 18.81592,7.394 18.75342,-6.573 0.0248,-13.60699 -17.95462,-89.745479 -18.15531,-104.306387 -0.21139,-11.556797 6.12229,-24.509529 11.54841,-24.368599 4.29858,0.141 8.33758,9.8729 8.31539,21.986399 0.32639,39.172806 -33.9808,36.640701 -33.9808,63.408791 0,17.301806 14.3634,21.871806 21.54511,21.871806 24.31979,-0.163 20.23919,-29.379786 4.73327,-29.379786 -9.14029,-0.326614 -17.13809,12.078186 -5.05978,22.360786 -20.4025,-8.976799 -9.46671,-30.685005 6.69198,-30.848305 21.54511,0.163101 25.29923,39.662305 -6.36548,39.825305 -18.93359,0.164 -26.93138,-16.484896 -26.7682,-29.542498 0,-25.135891 37.05101,-39.662491 36.56139,-60.881098 0,-13.384 -13.87378,-7.344898 -14.2002,14.200205 0.32651,13.384102 17.62781,84.058391 17.4646,94.994381 0,22.52399 -28.88998,15.179 -28.88998,3.754 0.16317,-16.32199 16.97488,-4.73401 11.75189,-4.244 -4.0806,7.18199 -3.94571,7.742 -3.94571,7.742 z"
+       id="path1204" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 280.66422,130.33928 c 0,3.78898 -3.1601,6.86499 -7.05341,6.86499 -3.89331,0 -7.0535,-3.07601 -7.0535,-6.86499 0,-3.79001 3.16019,-6.866 7.0535,-6.866 3.89331,0 7.05341,3.07599 7.05341,6.866 z"
+       id="path1205" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 288.32581,107.92928 2.3125,0 0,2.25 -2.3125,0 0,-2.25 z"
+       id="path1206" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 281.57581,72.617279 2.9375,0 0,7.3125 -2.9375,0 0,-7.3125 z"
+       id="path1207" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 276.36792,45.45649 1.39301,-0.240501 1.96026,12.937103 -1.39297,0.240498 -1.9603,-12.937099 z"
+       id="path1208" />
+  </g>
+  <g
+     style="fill:#ffffff;stroke:#ffffff"
+     id="g1981-4"
+     transform="matrix(0.18511366,0,0,0.18099363,258.9639,782.62307)"
+     inkscape:export-filename="/home/kyran/projects/expts-viz/d3-jazz/images/jazztitle.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 272.8367,137.43527 c 0.0219,8.47 18.81592,7.394 18.75342,-6.573 0.0248,-13.60699 -17.95462,-89.745479 -18.15531,-104.306387 -0.21139,-11.556797 6.12229,-24.509529 11.54841,-24.368599 4.29858,0.141 8.33758,9.8729 8.31539,21.986399 0.32639,39.172806 -33.9808,36.640701 -33.9808,63.408791 0,17.301806 14.3634,21.871806 21.54511,21.871806 24.31979,-0.163 20.23919,-29.379786 4.73327,-29.379786 -9.14029,-0.326614 -17.13809,12.078186 -5.05978,22.360786 -20.4025,-8.976799 -9.46671,-30.685005 6.69198,-30.848305 21.54511,0.163101 25.29923,39.662305 -6.36548,39.825305 -18.93359,0.164 -26.93138,-16.484896 -26.7682,-29.542498 0,-25.135891 37.05101,-39.662491 36.56139,-60.881098 0,-13.384 -13.87378,-7.344898 -14.2002,14.200205 0.32651,13.384102 17.62781,84.058391 17.4646,94.994381 0,22.52399 -28.88998,15.179 -28.88998,3.754 0.16317,-16.32199 16.97488,-4.73401 11.75189,-4.244 -4.0806,7.18199 -3.94571,7.742 -3.94571,7.742 z"
+       id="path1204-7" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 280.66422,130.33928 c 0,3.78898 -3.1601,6.86499 -7.05341,6.86499 -3.89331,0 -7.0535,-3.07601 -7.0535,-6.86499 0,-3.79001 3.16019,-6.866 7.0535,-6.866 3.89331,0 7.05341,3.07599 7.05341,6.866 z"
+       id="path1205-5" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 288.32581,107.92928 2.3125,0 0,2.25 -2.3125,0 0,-2.25 z"
+       id="path1206-6" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 281.57581,72.617279 2.9375,0 0,7.3125 -2.9375,0 0,-7.3125 z"
+       id="path1207-9" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#ffffff"
+       d="m 276.36792,45.45649 1.39301,-0.240501 1.96026,12.937103 -1.39297,0.240498 -1.9603,-12.937099 z"
+       id="path1208-6" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:24.00284767px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.60007107;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
+     x="283.52335"
+     y="849.07428"
+     id="text3847"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/home/kyran/projects/expts-viz/d3-jazz/images/jazztitle.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       x="283.52335"
+       y="849.07428"
+       id="tspan3851"
+       style="stroke-width:0.60007107">Classic Jazz Songs</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="57.732468"
+     y="24.918125"
+     id="text3857"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3859"></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:19.67438316px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.4918595;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
+     x="317.30142"
+     y="801.75482"
+     id="text3847-1"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/home/kyran/projects/expts-viz/d3-jazz/images/jazztitle.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       x="317.30142"
+       y="801.75482"
+       id="tspan3851-7"
+       style="font-style:italic;stroke-width:0.4918595;-inkscape-font-specification:Nimbus Roman No9 L Italic">Classic Jazz Songs</tspan></text>
+</svg>

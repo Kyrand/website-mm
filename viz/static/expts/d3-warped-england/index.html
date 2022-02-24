@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+ body{
+   background:#fafafa;
+ }
+
+ h1, h2{
+   text-align:center;
+ }
+
+ h1 {
+   font-size: 32px;
+ }
+
+ h2 {
+   font-size: 28px;
+ }
+
+
+ .container{
+   max-width:970px !important;
+ }
+
+ /* #intro{
+    padding:5px;
+    border:1px solid #333;
+    background:peachpuff;
+    margin-bottom:10px;
+    } */
+
+ #year-slider {
+   cursor: pointer;
+ }
+
+ .axis text {
+   font: 10px sans-serif;
+ }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.subunit-boundary {
+fill: none;
+stroke: #777;
+stroke-dasharray: 2,2;
+stroke-linejoin: round;
+}
+
+#chart-holder{
+min-height:700px;
+}
+
+#main-chart-holder{
+height: 600px;
+}
+
+#main-chart-wrapper{
+position:relative;
+}
+
+#main-chart{
+font: 12px sans-serif;
+height:600px;
+margin-top:-30px;
+}
+
+#sub-chart-holder{
+   height: 200px; --
+<!-- background: #eee; -->
+}
+
+#sub-chart-graph{
+<!-- height:300px; -->
+background: #666;
+}
+
+#buttons{
+z-index:999;
+<!-- margin-left: 5px -->
+}
+
+#slider-wrapper{
+min-height:60px;
+}
+
+#year-slider{
+width: 500px;
+}
+
+div#years{
+position:absolute;
+left:310px;
+top:0px;
+font-size:42px;
+font-weight:bold;
+}
+
+div#years span{
+vertical-alignment: middle;
+}
+
+span#yearstart{
+color:#ccc;
+}
+
+.cbar-title{
+font: 12px sans-serif;
+}
+</style>
+
+<div class='container'>
+  <h1>Warped England: Why Young People Can't Buy Houses Anymore</h1>
+  <h2>Visualizing change in the ratio of house-prices to household-incomes</h2>
+  <div id='intro'>
+    <p>Probably the two most important English economic indicators, for the common citizenry at least, are median average house price and median average household income (The 'median' is important here, for a brief explanation see <a href="http://economistsview.typepad.com/economistsview/2011/09/mean-vs-median-income-growth.html">here</a> - in essence it's the average that better reflects the common lot.). By combining these two we can derive a ratio, of house-incomes to house-prices (HI / HP), which says a lot about the state of the English economy.</br> I wanted to track the changes of this ratio using the most recent data available (1997-2012) and, to dramatically emphasize the change, reflect this by warping a map of the English regions to make the areas reflect the change in this ratio since 1997. What this shows is a staggering reduction in house-purchasing power over a mere fifteen years, not even a full generation. Across England the HI / HP has halved during this period, but many regions, particularly the south-east, have seen far greater rises (e.g. Brighton, where houses in 2012 were, on average, 9.5 times the household incomes of the city).
+    </br>This trend represents nothing less than the economic disenfranchisement of present and future generations, a literal and figurative generational land-grab.
+  </p>
+  </div>
+  <div class='row' id='chart-holder'>
+    <div class='col-sm-12'>
+      <p>The large map below shows the English regions, with their areas warped so as to reflect the reduction, relative to 1997, of the house purchasing power of the median average household wage. You can click on a region to highlight it (right map). The slider at the bottom allows you to change the year, or you can <b>press the animate button</b>. To turn the area warping off press 'warp off'.</p>
+    </div>
+    <div class="col-sm-7" id='main-chart-holder'>
+    <div class='btn-group btn-group-sm' id='buttons'></div>
+    <div id='main-chart-wrapper'>
+      <div id='years'><span id='current'>1997</span> / <span id='yearstart'>1997</span></div>
+      <svg id="main-chart"></svg>
+    </div>
+      <div id='slider-wrapper'>
+        <div id='year-slider'></div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <h2 id="sub-chart-title"></h2>
+      <div class='row'>
+        <div class="col-sm-6" id='sub-chart-holder'>
+          <svg id="sub-chart"></svg>
+        </div>
+        <div class="col-sm-6" id='sub-chart-info'>
+          <p>Here we superimpose a shrunken regional map, adjusting for the change in house buying power since 1997. The map is scaled by the ratio HI / HP for the current year divided by that of 1997.
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-12'>
+      Below is a line-chart showing the yearly change in house-prices as a multiple of median household income for England and the selected region. Click on the big map left to change the region.
+        </div>
+        <div class='col-sm-12' id='sub-chart-graph'></div>
+      </div>
+    </div>
+  </div>
+  <div id='infobox'>
+<!-- <style> -->
+<!--   #twitter_buttons{ -->
+<!--   position:absolute; -->
+<!--   right:1%; -->
+<!--   top:1%; -->
+<!--   } -->
+<!-- </style>  -->
+
+<div id='twitter_buttons'>
+  <a href="https://twitter.com/kyran_dale" class="twitter-follow-button" data-show-count="false">Follow @kyran_dale</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="kyran_dale">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></br>
+</div>
+    <h3>Credits</h3>
+    <h4>Libraries</h4>
+    <p><a href="http://d3js.org">D3</a> did the heavy-lifting with it's wonderful topographic map extensions. Shawn Allen's <a href="https://github.com/shawnbot/d3-cartogram/">d3-cartogram</a> is a very cool little implementation of James A. Dougenik, Nicholas R. Chrisman and Duane R. Niemeyer's cartogramic algorithm. The docs are a little on the sparse side but it was nice to have. Generally cartograms preserve the total original area but I wanted that to shrink with the HI->HP ratio, which required hacking the source (yay for open-source software). I used the <a href="http://dimplejs.org">Dimple</a> library for the chart but had to fight it a little to get what I wanted. Once again I'm reminded that D3's great boon is to enable one to break free of such constraints. Thanks to all.</br>
+      <h4>Data</h4>
+      The data was supplied by <a href="http://data.gov.uk/dataset/ratio-of-median-house-price-to-median-earnings">data.gov.uk</a> under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence.</a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="static/lib/d3.slider.js"></script>
+<link rel="stylesheet" href="static/lib/d3.slider.css" type="text/css" media="screen" />
+<script src="static/lib/colorbrewer.js"></script>
+<script src="static/cartogram.js"></script>
+<script src="static/lib/dimple.v2.1.0.min.js"></script>
+<script src="static/d3_basic_chart.js"></script>
+<script src="static/kcharts.js"></script>
+<script src="static/script.js"></script>

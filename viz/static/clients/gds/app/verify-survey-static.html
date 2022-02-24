@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="static/css/reset.css" type="text/css" media="screen" /> -->
+<link rel="stylesheet" href="static/css/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="static/css/style_indivs.css" type="text/css" media="screen" />
+
+<body>
+<div id='wrapper'>
+  <div id='sidebar'>
+    <div class="heading">
+      <span>Estimating GOV.UK Verify’s demographic coverage
+</span>
+    </div>
+    <div class="about">
+        <!-- <p>The thousand element bar chart is composed of a representative sample of respondents from a demographic survey conducted by the Office of National Statistics (ONS) for the Verify project. Each square represents an British individual, selected from the survey by weighted demographic significance.</p>
+             <p>You can group and colour the respondents by various demographic measures. You can also colour the individuals by their verification score (from complete fail (0) to full pass (1)).</p> -->
+        <p>The chart is composed of a 1,000 squares, each representing an individual in the UK.  These individuals were selected from a survey conducted by the Office for National Statistics (ONS) and are a representative sample of the adult population in the UK. </p>
+
+        <p>You can set the colours of the squares to show the estimated likelihood that the individuals have the combination of evidence and/or technology to be able to verify their identity online using GOV.UK Verify.  You can also set the columns and colours to show a range of demographic characteristics of the individuals.</p>
+
+        <p>If you have selected to colour the individuals by the likelihood that our certified companies will be able to verify them, you can also adjust the time slider to see how this will change over time.</p>
+
+<p>This visualisation was inspired by Pete Cook's brilliant <a href="http://charts.animateddata.co.uk/freelance2014/">visualisation of Freelance Rates</a>.</p>
+
+    </div>
+    <div class="menu">
+      <div id="group-select">
+        <text class='label'>Group by</text>
+        <select id='group'></select>
+      </div>
+      <div id="color-select">
+        <text class='label'>Colour by</text>
+        <select id='color'></select>
+      </div>
+    </div>
+    <div class="legend" id='color-legend'>
+      <div class="key" id="color-keys">
+        <h3>Key</h3>
+      </div>
+      <div id="verify-info" class='verify'>
+        <h3>&nbsp;</h3>
+        <p id="lead">Verification measures the likelihood that our certified companies will be able to verify an individual’s identity at your chosen point in time.</p>
+
+        <!-- this is a placeholder for some information about the verification variable and what it all means for the good people of the United Kingdom etc.... -->
+      </div>
+    </div>
+  </div>
+
+  <div id="chart">
+    <h1 id='title'></h1>
+    <h2 id='verify-title' class='_verify'></h2>
+    <div id='square-info'>
+      <div class='indiv-square'></div> each square represents an individual survey respondent coloured by <span id='color-group'></span>
+    </div>
+    <div id="chart-tiles">
+      <svg id='tile-chart'>
+        <g id='vlabels' class='verify'></g>
+        <g id='tiles'></g>
+        <g id='labels'></g>
+      </svg>
+    </div>
+
+    <!-- <div id="time-slider-wrapper" class='verify'>
+         <h3>Explore verification scores over time</h3>
+         <p>Drag the grey slider to see how individual verification scores change over time. </br>The red lines indicate key dates when provision by the certified companies changed.</p>
+         <svg id='time-slider'>
+         </svg>
+         </div> -->
+
+    <!-- <div id="footer"> -->
+    <div class="tooltip"></div>
+  </div>
+
+</div>
+
+<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<script src="static/lib/d3.v3.min.js"></script>
+<script src="static/lib/queue.min.js"></script>
+<script src="static/lib/lodash.min.js"></script>
+<script src="static/lib/colorbrewer.min.js"></script>
+
+<script src="config/indiv_config.js"></script>
+<script src="static/js/script_indiv_static.js"></script>
+
+</body>

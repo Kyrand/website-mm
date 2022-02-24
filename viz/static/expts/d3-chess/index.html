@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  #intro{
+  <!-- padding:5px; -->
+  <!-- border:1px solid #333; -->
+  <!-- background:peachpuff; -->
+  <!-- margin-bottom:10px; -->
+  }
+
+  h1,h2{
+  text-align:center;
+  }
+
+  .overlay text{
+  font-weight: bold;
+  font-size:72px;
+  }
+
+  #boards{
+  margin-bottom:15px;
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+  #buttons{
+  text-align:center;
+  <!-- margin:5px 0 10px 0; -->
+  }
+
+  .btn-primary{
+  background-color:#999 !important;
+  border-color:#333 !important
+  }
+
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover{
+  background-color:black !important;
+  }
+
+ .board {
+ }
+  <!-- svg{ -->
+  <!-- width:100%; -->
+  <!-- } -->
+</style>
+<div class='container'>
+  <h1>A D3 Chess-viewer</h1>
+  <h2>Kasparov vs Karpov: eight games</h2>
+  <div id='intro'>
+    <p>I needed a Javascript chess-viewer for a larger visualization I'm planning. I found one <a href="https://github.com/JakeBecker/D3-Chess">here</a> which looks pretty impressive but is more full-featured than I need and written in coffeescript, which I can't learn to love. Besides which, with D3 it's a good idea to take every opportunity to develop one's fu. So I rolled one from scratch, and I'm pretty happy with the results. It uses the very nice <a href="https://github.com/jhlywa/chess.js/blob/master/README.md">chess.js</a> library to turn moves in short algebraic notation (e.g. 'e4') to the more usable long form (e.g. 'e2-e4').<br />
+      Below are eight random games from the titanic series between Gary Kasparov and Anatoly Karpov, played out over the 80s and 90s. Press 'play games' for a rather hypnotic simultaneous chess game.</p>
+  </div>
+  <div id='buttons'></div>
+  <div id='boards'>
+  </div>
+</div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script type="text/javascript" src="/static/libs/jquery-extras/iframeResizer/js/iframeResizer.contentWindow.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="lib/chess.js"></script>
+<script src="lib/kcharts_core.js"></script>
+<script src="lib/kcharts_buttons.js"></script>
+<script src="kcharts_chessboard.js"></script>
+
+<script src="script.js"></script>

@@ -1,0 +1,25 @@
+<div class='infobox'>
+  <h2>Histograms and barcharts with menu-filter and chart-filter </h2>
+  <p>D3, Angular, crossfilter and some dummy json data are used to create a filter-menu enabling the progressive filtering of the data by selected dimensions. Bespoke histograms and pie+barcharts (courtesy of <a href="nvd3.org">NVD3</a>) are used to display the data. Use the green filter button to drill down through the data, with the bar-graphs reflecting this change. You can also apply a filter by clicking on the bars. The filter-selector allows you to select subsets of the active data.</p>
+</div>
+<chart-group dataURL='data/test_data.json'>
+  <filter-menu ng-if='data' data='data'></filter-menu>
+  <div class='row'>
+    <klinechart-filter class='col-md-11' data='data' value='baacoefficient' y-axis='order' x-axis='baacoefficient' height='160'></klinechart-filter>
+    <div class='infobox infobox-small col-md-1'>
+      Left-click and drag the mouse to select some items, double left-click to reset. The active-charts will adapt to the new data.
+    </div>
+  </div>
+  <div class='row' height=250>
+    <khist2d data='data' class='col-md-4' xKey='type' yKey='foofactor' countKey='baacoefficient' activeAxes='true'></khist2d>
+    <khist2d  data='data' class='col-md-4' xKey='product_subgroup' yKey='foofactor' countKey='baacoefficient' activeAxes='true'></khist2d>
+    <khist2d  data='data' class='col-md-4' xKey='product_family' yKey='foofactor' countKey='baacoefficient' activeAxes='true'></khist2d>
+  </div>
+  <div class = 'row' height=250>
+    <kpiechart class='col-md-3' data='data' col='type'></kpiechart>
+    <kbarchart class='col-md-3' data='data' col='product_family'></kbarchart>
+    <kbarchart class='col-md-3' data='data' col='product_subgroup'></kbarchart>
+    <kbarchart class='col-md-3' data='data' col='foofactor'></kbarchart>
+  </div>
+</div>
+</chart-group>

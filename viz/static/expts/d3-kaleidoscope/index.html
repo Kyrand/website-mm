@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body{
+  background: black;
+  color: #eee;
+  }
+
+  #intro{
+  padding:5px;
+  border:1px solid #333;
+  background:peachpuff;
+  margin-bottom:10px;
+  }
+
+  #kscopewrapper{
+  text-align:center;
+  width:100%;
+  float:left;
+  }
+
+  #sliders{
+  width:500px;
+  }
+
+  #selectors div{
+  float:left;
+  width:100%;
+  }
+
+  #twitter_buttons{
+  position:absolute;
+  right:1%;
+  top:1%;
+  }
+</style>
+
+<body>
+  <div class='container'>
+    <div id='buttons'></div>
+    <div id='selectors'>
+      <div id='poly-selector'></div>
+      <div id='segment-selector'></div>
+    </div>
+    <div id='twitter_buttons'>
+<a href="https://twitter.com/kyran_dale" class="twitter-follow-button" data-show-count="false">Follow @kyran_dale</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="kyran_dale">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></br>
+<iframe src="https://ghbtns.com/github-btn.html?user=Kyrand&repo=d3-kaleidoscope&type=watch&count=true" height="30" width="118" frameborder="0" scrolling="0" style="width:118px; height: 20px;" allowTransparency="true"></iframe>
+    </div>
+    <div id='kscopewrapper'>
+      <svg id='chart'></svg>
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+
+  <script src="script.js"></script>
+</body>

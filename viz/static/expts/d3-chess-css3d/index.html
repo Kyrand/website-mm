@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<style>
+  html, body {
+  height: 100%;
+  }
+
+  body {
+  background: #000 !important;
+  color:#ddd !important;
+  margin: 0;
+  font-family: Helvetica, sans-serif;;
+  overflow: hidden;
+  }
+
+  #bigboard{
+  background:#000;
+  color:#eee;
+  }
+
+  #intro{
+  padding:5px;
+  border:1px solid #333;
+  background:peachpuff;
+  margin-bottom:10px;
+  }
+  <!-- #board{width:400px, height:400px;} -->
+  .overlay text{
+  font-weight: bold;
+  font-size:72px;
+  }
+
+  #buttons{
+  position: absolute;
+  top:10px;
+  left:10px;
+  z-index:999;
+  <!-- margin:5px 0 10px 0; -->
+  }
+
+  #buttons .btn{
+  background-color:#333;
+  border-color:#333;
+  }
+  <!-- button { -->
+  <!-- color: rgba(127,255,255,0.75); -->
+  <!-- background: transparent; -->
+  <!-- outline: 1px solid rgba(127,255,255,0.75); -->
+  <!-- border: 0px; -->
+  <!-- padding: 5px 10px; -->
+  <!-- cursor: pointer; -->
+  <!-- } -->
+  <!-- button:hover { -->
+  <!-- background-color: rgba(0,255,255,0.5); -->
+  <!-- } -->
+  <!-- button:active { -->
+  <!-- color: #000000; -->
+  <!-- background-color: rgba(0,255,255,0.75); -->
+  <!-- } -->
+
+  .cboard{
+  background: black;
+  cursor: pointer;
+   -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
+  }
+
+  .cboard-select{
+  text-align: center;
+  }
+
+  .cboard-select svg{
+  width:200px;
+  height:200px;
+  margin:auto;
+  }
+
+  .cboard-select .overlay text{
+  font-size:50px;
+  }
+
+  #scoreboard{
+  width: 300px;
+  position:absolute;
+  left:2%;
+  bottom:2%;
+  <!-- color:#eee; -->
+  font-size:150%;
+  z-index:999;
+  }
+
+  span#move-num{
+  font-size:120px;
+  }
+
+  #gamedata{
+  width: 350px;
+  position:absolute;
+  right:2%;
+  bottom:2%;
+  <!-- color:#eee; -->
+  font-size:150%;
+  opacity:0;
+  z-index:999;
+  }
+
+  #infobox{
+  font-size:11px;
+  width:350px;
+  position:absolute;
+  right:2%;
+  top:30px;
+  color:#bbb;
+  }
+
+  #gamedata .title{
+  font-weight: bold;
+  }
+
+  #info .big{
+  font-size:24px;
+  }
+
+  .col1{
+  font-weight:bold;
+  }
+
+  #deathzone{
+  position:absolute;
+  left:0%;
+  top:0px;
+  width:100%;
+  height:100%;
+  }
+
+  #deathzone svg{
+  width:100%;
+  height:100%;
+  }
+
+  #deathzone image{
+  fill: #888;
+  opacity:0.5;
+  }
+</style>
+
+<!-- <div class='container'> -->
+<!--   <svg id='chart'></svg> -->
+<!-- </div> -->
+<body>
+
+<style>
+  #twitter_buttons{
+  position:absolute;
+  right:1%;
+  top:1%;
+  }
+</style>
+
+<div id='twitter_buttons'>
+  <a href="https://twitter.com/kyran_dale" class="twitter-follow-button" data-show-count="false">Follow @kyran_dale</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="kyran_dale">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></br>
+</div>
+
+  <div id='bigboard'>
+    <div id='infobox'>
+      <p>Best viewed on a webkit browser (for Firefox enable hardware acceleration). These are 54 randomly selected games from the great Kasparov vs Karpov chess battles of the 80s and 90s, arguably the greatest series in the history of chess, Fischer-Spassky notwithstanding. Using CSS3D (courtesy of THREE.js brilliant viewer) and D3 for the chessboards. Turn off the auto-cam and you can manually zoom, pan and rotate the cube. As the games advance, the ghosts of the dead litter the battlefield...
+      </p>
+    </div>
+    <div id='scoreboard'></div>
+    <div id='gamedata'>
+      <div id='selected-game'></div>
+      <h3>Game Details</h3>
+      (click on cube to select a game)
+      <div id='details'></div>
+    </div>
+    <div id='buttons'></div>
+    <div id='deathzone'><svg></svg></div>
+    <div id='viewer'></div>
+  </div>
+  <!-- <div id="menu"> -->
+  <!--   <button id="table">TABLE</button> -->
+  <!--   <button id="sphere">SPHERE</button> -->
+  <!--   <button id="helix">HELIX</button> -->
+  <!--   <button id="grid">GRID</button> -->
+  <!-- </div> -->
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src="lib/ICanHaz.min.js"></script>
+  <script src="lib/minpubsub.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+  <script src="lib/3js/renderers/CSS3DRenderer.js"></script>
+  <script src="lib/3js/controls/TrackballControls.js"></script>
+  <script src="lib/3js/libs/tween.min.js"></script>
+
+  <script src="lib/chess.js"></script>
+  <script src="lib/kcharts_core.js"></script>
+  <script src="lib/kcharts_buttons.js"></script>
+  <script src="lib/kcharts_chessboard.js"></script>
+
+  <script id='datarow3' type='text/html'>
+    <div class="row">
+      <div class="col-xs-4 col1">{{col1}}</div>
+      <div class="col-xs-4">{{col2}}</div>
+      <div class="col-xs-4">{{col3}}</div>
+    </div>
+  </script>
+
+  <script id='datarow2' type='text/html'>
+    <div class="row">
+      <div class="col-xs-4 col1">{{col1}}</div>
+      <div class="col-xs-4">{{col2}}</div>
+    </div>
+  </script>
+
+  <script id='scoresheet' type='text/html'>
+    <div class='row' id='info'>
+      <span >Move </span><span id='move-num'>{{moveNum}}</span>
+    </div>
+    <div id='scorecard' class='row'>
+      <div class='col-xs-4'></div>
+      <div class='col-xs-4'>{{player1}}</div>
+      <div class='col-xs-4'>{{player2}}</div>
+    </div>
+    {{#playerScores}}{{>datarow3}}{{/playerScores}}
+    {{#blackWins}}{{>datarow3}}{{/blackWins}}
+    {{#whiteWins}}{{>datarow3}}{{/whiteWins}}
+  </script>
+
+  <script id='gamelist' type='text/html'>
+    <h3>Game Details</h3>
+    (click on cube to select a game)
+    {{#white}}{{>datarow2}}{{/white}}
+    {{#black}}{{>datarow2}}{{/black}}
+    {{#event}}{{>datarow2}}{{/event}}
+    {{#location}}{{>datarow2}}{{/location}}
+    {{#eco}}{{>datarow2}}{{/eco}}
+    {{#plycount}}{{>datarow2}}{{/plycount}}
+    {{#result}}{{>datarow2}}{{/result}}
+  </script>
+
+  <script src="simpleviewer.js"></script>
+  <script src="script.js"></script>
+
+</body>

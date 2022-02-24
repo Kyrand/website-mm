@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.bar {
+  fill: steelblue;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  <!-- display: none; -->
+}
+
+/* tell the SVG path to be a thin blue line without any area fill */
+path {
+stroke: steelblue;
+stroke-width: 1;
+fill: none;
+}
+
+circle.time-marker{
+  fill: red;
+  }
+
+svg{
+  float: left;
+  }
+</style>
+
+<svg id="chart_xy"></svg>
+<svg id="chart_xz"></svg>
+<svg id="chart_yz"></svg>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="script.js"></script>
+<script>
+</script>

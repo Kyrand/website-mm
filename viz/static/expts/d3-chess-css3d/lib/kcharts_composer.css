@@ -1,0 +1,15 @@
+.dev#canvas{
+    border: 1px solid red;
+}
+
+.dev#canvas div{
+    border: 1px solid green;
+}
+
+.expand{
+    left:0; right:0; bottom:0;
+}
+
+#canvas h2{
+    text-align:center;
+    }

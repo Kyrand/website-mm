@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="lib/nv.d3.css" rel="stylesheet" type="text/css" media="screen" />
+<style>
+  #intro{
+  padding:5px;
+  border:1px solid #333;
+  background:peachpuff;
+  margin-bottom:10px;
+  }
+
+  #console{
+  width:1000px;
+  height:800px;
+  }
+
+  .composer .active-window{
+  border: 1px solid red;
+  }
+
+  path {
+  stroke-width: 1;
+  fill: none;
+  }
+
+  .axis text {
+  font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  }
+
+  .axes-labels .label{
+  font-size: 12px;
+  }
+
+  .centerbox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  }
+  .axis text {
+  font: 11px sans-serif;
+  }
+
+  .axis path {
+  display: none;
+  }
+
+  .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  }
+
+  .grid-background {
+  fill: #ddd;
+  }
+
+  .grid line,
+  .grid path {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+  }
+
+  .grid .minor.tick line {
+  stroke-opacity: .5;
+  }
+
+  .brush .extent {
+  stroke: #000;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+  }
+
+</style>
+<div id='console'>
+  <!-- <svg id='chart'></svg> -->
+  <div id="info">
+    <h3>Reading the Balance Sheet</h3>
+    <p>A balance sheet, also known as a "statement of financial position," reveals a company's assets, liabilities and owners' equity (net worth). The balance sheet, together with the income statement and cash flow statement, make up the cornerstone of any company's financial statements. If you are a shareholder of a company, it is important that you understand how the balance sheet is structured, how to analyze it and how to read it.
+    </p>
+    <div id='mainChart'></div>
+  </div>
+
+  <div class='active-text' id="statusLine">
+    <div class="centerbox">
+      <p class='live' id='status'></p>
+    </div>
+  </div>
+</div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="lib/minpubsub.js"></script>
+<script src="lib/nv.d3.js"></script>
+<script src="lib/crossfilter.min.js"></script>
+
+<script src="lib/kcharts.js"></script>
+<script src="kcharts_composer.js"></script>
+<script src="script.js"></script>

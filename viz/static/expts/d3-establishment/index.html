@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="lib/kcharts_composer.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+<style>
+  .x-axis path, .y-axis path{
+  stroke-width:1px;
+  stroke:#ccc;
+  fill:none;
+  }
+
+  #options{
+  text-align:center;
+  padding: 10px;
+  }
+
+  .flower-label{
+  font-size:10px;
+  }
+
+  .ktooltip div#stats{
+  text-align:left;
+  }
+
+  #chart-type{
+  text-align:center;
+  padding: 10px;
+  }
+
+  #chart{
+  background:#efefef;
+  <!-- opacity:0; -->
+  }
+
+ .user-tip {
+     text-align: center;
+     padding: 5px;
+ }
+
+</style>
+
+<div class='container'>
+  <h1>Elitist Britain: Education and the Establishment</h1>
+  <p>A recent report by the Commission on Social Mobility and Child Poverty Commission (<a href='https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/347915/Elitist_Britain_-_Final.pdf'>see here</a>) analysed the background of 4000 leaders in politics, business, the media and other aspects of life in the UK. It noted: </p>
+    <blockquote>
+      This research highlights        a dramatic over       -       representation of        those educated at        independent schools        and Oxbridge across        the institutions that have such a profound influence on what        happens in our country.        It suggests that Britain is deeply        elitist.
+    </blockquote>
+  <p>The chart below gives you a chance to explore the commission's data on schooling and higher-education (university) by profession. Note, for example, the stark contrast between the proportion of senior judges and armed forces officers educated at independent schools (and a small subset of those at that, the Etons, Harrows and Sandhursts) and that of pop stars and the Shadow Cabinet (Labour 2014). This trend extends to higher education, with 75% of senior judges having attended an Oxbridge college. It is astonishing that in a so-called modern democracy something as important the law should be overseen by a small self-perpetuating plutocracy, completely unrepresentative of the population at large. But it's not just the law. From senior newspaper editors, civil-servants to the chairs of public bodies and QUANGOs, the UK has an entrenched elite. And as the commission found, the chance of the rest of us 'rising' to it are diminishing by the year.
+  </p>
+  <div id="composer" class='_composer _dev'>
+    <div id="chart-type"></div>
+    <div class='user-tip'>click on the colored circles to explore distributions</div>
+    <div class='user-tip'>Hover over the labels for more info</div>
+    <svg id='chart'></svg>
+
+    <div id="flower-tooltip" class='ktooltip'>
+      <div id='title'></div>
+      <div id='stats' class='last'></div>
+    </div>
+
+    <div id="button-tooltip" class='ktooltip'>
+      <div id="title">
+      </div>
+    </div>
+
+    <div id='options'></div>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://lab.interactivethings.com/lib/d3-grid.js"></script>
+
+<script src="lib/kcharts.js"></script>
+<script src="lib/kcharts_composer.js"></script>
+
+<script src="script.js"></script>

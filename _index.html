@@ -1,0 +1,50 @@
+---
+layout: splash
+permalink: /
+hidden: true
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/mm-home-page-feature.jpg
+excerpt: >
+  Hi, I'm a freelance web data visualisation consultant. I specialize in crafting bespoke visualisations using such libraries such as D3, THREEJS (WebGL), Vue, React, AFrame (WebVR) and many others. If you think I might be able to help you just <a href="/#contact" class="scrolly">GET IN TOUCH</a>.
+feature_row:
+  - image_path: /assets/images/d3-jazz-screenshot.png
+    alt: "data viz"
+    title: "Data viz"
+    excerpt: "A few examples from the vaults."
+    url: "/dataviz"
+    btn_class: "btn--primary"
+    btn_label: "Go to collection"
+  - image_path: /assets/images/d3-kaleidoscope.png
+    alt: "Posts"
+    title: "Articles"
+    excerpt: "Things done, things tried, things learned the hard way."
+    url: "/tags"
+    btn_class: "btn--primary"
+    btn_label: "Find an article"
+  - image_path: /assets/images/openai/slime_00.png
+    alt: "Minimal cognition with OpenAI and others"
+    title: "Evolving Minimally cognitive controllers"
+    excerpt: "Artificial neural networked control systems evolved and analysed using OpenAI challenges and others."
+    url: "/minimal-cognition"
+    btn_class: "btn--primary"
+    btn_label: "Go to the collection"
+---
+
+{% include feature_row %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.posts %}
+{% endif %}
+
+<div class="entries-{{ page.entries_layout | default: 'list' }}">
+  {% for post in posts %}
+  {% include archive-single.html type=page.entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}

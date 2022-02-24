@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body{
+  background:black;
+  }
+  #intro{
+  padding:0 10px 0 10px;
+  <!-- border:1px solid #333; -->
+  <!-- background:peachpuff; -->
+  margin-bottom:10px;
+  }
+
+  #intro h1{
+  text-align:center;
+  }
+
+  #console h2{
+  text-align:center;
+  }
+
+  .expand{
+  left:0; right:0; bottom:0;
+  }
+
+  circle {
+  fill-opacity: .1;
+  fill:black;
+  stroke:black;
+  stroke-width: 1px;
+  }
+
+  .leaf circle {
+  fill: white;
+  fill-opacity: 1;
+  }
+
+  text {
+  font: 10px sans-serif;
+  }
+
+  .node text{
+  fill: #eee;
+  opacity:0;
+  }
+
+  .node.leaf text{
+  fill: #333;
+  opacity:1;
+  }
+
+  .range-buttons{
+  text-align:center;
+  position:relative;
+  }
+
+  .btn-primary{
+  background-color:#999 !important;
+  border-color:#333 !important
+  }
+
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover{
+  background-color:black !important;
+  }
+
+  .button-holder{
+  position:relative;
+  text-align:center;
+  }
+
+  #moves-made div{
+  width:90px;
+  height:100px;
+  margin:auto;
+  text-align: left;
+  <!-- border:1px solid red; -->
+  font-size:13px;
+  }
+
+  #moves-made h4{
+  font-size:15px;
+  }
+</style>
+
+<div class="container">
+  <div id='intro'>
+    <h1>Using Packed Circle's to Visualise Chess Openings</h1>
+    <p>Using the 135 chess games played during the 80s and 90s by Garry Kasparov and Anatoly Karpov, this uses one of D3's packing algorithms to show the nested opening lines (first five moves or ten-ply). The size of the circles reflects the number of games contained within that line of play. So we can see that Kasparov's favourite opening move as white, over all the games, is d4, queen's pawn, but that he often chose e4, king's pawn, variants. Karpov shows less variety in his opening lines, with d4 much favoured. <br />
+      By clicking on one of the buttons below one can select a time-ordered range of the games. Selecting the upper-third range shows that Kasparov switch exclusively to a d4 opening move, as did Karpov, with the exception of two Nf3 (king's side knight) openings.
+    </p>
+  </div>
+  <div id='console'>
+    <div id="moves-made" class='text-center'><div class='text-left'></div></div>
+    <div id="kasp-box">
+      <h2>Kasparov White</h2>
+      <div id="left-tree" class='expand'></div>
+    </div>
+    <div id="karp-box">
+      <h2>Karpov White</h2>
+      <div id="right-tree" class='expand'></div>
+    </div>
+  </div>
+</div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script type="text/javascript" src="/static/libs/jquery-extras/iframeResizer/js/iframeResizer.contentWindow.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+<script src="lib/3js/renderers/CSS3DRenderer.js"></script>
+<script src="lib/3js/controls/TrackballControls.js"></script>
+<script src="lib/3js/libs/tween.min.js"></script>
+
+<script src="lib/minpubsub.js"></script>
+
+<script src="lib/chess.js"></script>
+<script src="lib/kcharts_core.js"></script>
+<script src="lib/kcharts.js"></script>
+<script src="lib/kcharts_buttons.js"></script>
+<script src="lib/kcharts_chessboard.js"></script>
+
+<script src="lib/kcharts_composer.js"></script>
+
+<script src="lib/d3.parsets.js"></script>
+<link rel="stylesheet" href="lib/d3.parsets.css" type="text/css" media="screen" />
+
+<!-- <script src="simpleviewer.js"></script> -->
+<script src="scripts/script_circles.js"></script>

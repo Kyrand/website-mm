@@ -1,0 +1,169 @@
+body {
+	font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #004276;
+}
+
+#wrapper {
+  width: 1040px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+#wrapper.portrait {
+  margin-bottom: 50px;
+}
+
+/* CONTAINERS */
+#chart {
+  padding: 20px;
+}
+
+#sidebar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+svg#tile-chart, svg#time-slider {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* CHART */
+
+#chart {
+    position: relative;
+    /* height: 700px; */
+    width: 680px;
+}
+
+#chart h1, h2, h3 {
+    text-align: center;
+    font-weight: normal;
+    font-family: Oswald;
+    margin: 0;
+}
+
+#chart-tiles {
+    width: 100%;
+    height: 700px;
+}
+
+/* TIME SLIDER */
+
+#time-slider-wrapper {
+    /* background: #eee; */
+    width: 100%;
+    height: 200px;
+}
+
+#time-slider-wrapper p {
+    text-align: center;
+}
+
+.axis {
+  fill: gray;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis .halo {
+  stroke: gray;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.slider .handle path {
+  stroke: #999;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.slider .handle text {
+  fill: #999;
+  text-align: center;
+  font-size: 18px;
+}
+
+.marker line {
+    stroke: red;
+    stroke-width: 2;
+}
+/* SIDEBAR */
+
+#sidebar {
+    position: absolute;
+    right: 0;
+    width: 300px;
+}
+
+#sidebar .heading span {
+  /* font-family: 'Montserrat'; */
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-left: 3px;
+  /*font-weight: 300;*/
+}
+
+/* LABELS */
+#chart .label { opacity:0;}
+#chart #vlabels .label {opacity:1}
+
+/* MENUS */
+text.label {
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+#group-select, #color-select{
+    margin-bottom:10px;
+}
+
+/* KEY */
+
+.legend .key-item {
+    display: block;
+    border-left: 16px solid;
+    padding-left: 4px;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+
+.key{
+    float:left;
+}
+
+/* Verification variable specific */
+#verify-info {
+    float: left;
+    margin-left: 10px;
+    width: 180px;
+}
+
+#verify-info p#lead {
+    margin-top: 0;
+}
+
+#square-info{
+    text-align: center;
+}
+
+.indiv-square {
+    width: 11px;
+    height: 11px;
+    background: red;
+    display: inline-block;
+}

@@ -1,0 +1,21 @@
+<chart-group dataURL='data/test_data.json'>
+  <div navbar-bdk ng-if='data' data='data'></div>
+  <h1>Synchronized Bar-charts with Menu-filter</h1>
+  <div class='row'>
+    <!-- <div sslinechart-bdk class='col-md-12' data='data' value='baacoefficient' y-axis='order' x-axis='baacoefficient' height='250'></div> -->
+    <viewer3d class='col-md-12' height='800' debug='true'>
+      <!-- <dataplane pos='[-1000, 800, 0]' > -->
+      <dataplane pos='[-1000, 800, 0]' >
+        <ssbarchart class='col-md-3' data='data' col='type'></ssbarchart>
+        <ssbarchart class='col-md-3' data='data' col='product_family'></ssbarchart>
+        <ssbarchart class='col-md-3' data='data' col='product_subgroup'></ssbarchart>
+        <ssbarchart class='col-md-3' data='data' col='foofactor'></ssbarchart>
+      </dataplane>
+      <dataplane pos='[1000, 0, 0]' orientation='vertical' padding='20'>
+        <sshist2d data='data' class='col-md-4' xKey='type' yKey='foofactor' countKey='baacoefficient' activeAxes='true' height='375'></sshist2d>
+        <sshist2d data='data' class='col-md-4' xKey='product_subgroup' yKey='foofactor' countKey='baacoefficient' activeAxes='true' height='375'></sshist2d>
+        <sshist2d  data='data' class='col-md-4' xKey='product_family' yKey='foofactor' countKey='baacoefficient' activeAxes='true' height='375'></sshist2d>
+      </dataplane>
+    </viewer3d>
+  </div>
+</chart-group>

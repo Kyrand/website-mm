@@ -1,0 +1,24 @@
+<div class='infobox'>
+  <h2>Synchronised Histograms with Menu-filter and Brush-filter</h2>
+  <p>A bespoke histogram is combined with some dummy-data, a menu-filter (green button) and a brush-filter (top line-chart) to enable progressive filtering of the data by dimension. The circle-histograms allow control of the four dimensions, x, y, color and radius, allowing for a succinct presentation of data correlations. The x and y axes of the histograms are synchronised for demonstration.</p>
+</div>
+<chart-group class='row' dataURL='data/test_data.json'>
+  <div filter-menu ng-if='data' data='data'></div>
+  <!-- <h1>Synchronized Histograms with Menu-filter</h1> -->
+  <div class='row'>
+    <div klinechart-filter class='col-md-11' data='data' value='baacoefficient' y-axis='order' x-axis='baacoefficient' height='250'></div>
+    <div class='infobox infobox-small col-md-1'>
+      Left-click and drag the mouse to select some items, double left-click to reset. The active-charts will adapt to the new data.
+    </div>
+    <div khist2d data='data' class='col-md-3' xKey='type' yKey='foofactor' countKey='baacoefficient' activeAxes='true' inhouseScale='false' height='375'></div>
+    <div khist2d data='data' class='col-md-3' xKey='product_subgroup' yKey='foofactor' countKey= 'baacoefficient' activeAxes='true' inhouseScale='false' height='375'></div>
+    <div khist2d data='data' class='col-md-6' xKey='baacoefficient' yKey='foofactor' countKey='baacoefficient' activeAxes='true'
+         countKeyColor='foofactor' height='375'></div>
+    <!-- <div khist2d data='data' class='col-md-3' xKey='baacoefficient' yKey='foofactor' countKey='baacoefficient' activeAxes='true' -->
+    <!--      inhouseScale='false' height='375'></div> -->
+    <!-- <div kbarchart class='col-md-3' data='data' col='type'></div> -->
+    <!-- <div kbarchart class='col-md-3' data='data' col='product_family'></div> -->
+    <!-- <div kbarchart class='col-md-3' data='data' col='product_subgroup'></div> -->
+    <!-- <div kbarchart class='col-md-3' data='data' col='foofactor'></div> -->
+  </div>
+</chart-group>

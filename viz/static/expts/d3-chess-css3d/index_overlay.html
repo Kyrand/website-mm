@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  #intro{
+  padding:5px;
+  border:1px solid #333;
+  background:peachpuff;
+  margin-bottom:10px;
+  }
+
+  .cboard g.piece image{
+  opacity: 0.015;
+  }
+
+  .cboard{
+  position: absolute;
+  top:0;
+  left:0;
+  }
+
+  #bigboard{
+  position:relative;
+  margin:auto;
+  }
+</style>
+
+<div class="container">
+
+  <h1>Simultaneous and Superimposed</h1>
+  <p>Part of a series trying to visualise the class Kasparov vs Karpov chess war, here we superimpose all 135 games and play them simultaneously. The pieces have a low opacity (0.01) so games following similar movement patterns will tend to reinforce (in SVG opacity is additive) while those diverging from the mainlines will tend to wash out.
+  </p>
+  <div id='bigboard'>
+    <!-- <div id="viewer"> -->
+    <!-- </div> -->
+  </div>
+
+</div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+<script src="lib/3js/renderers/CSS3DRenderer.js"></script>
+<script src="lib/3js/controls/TrackballControls.js"></script>
+<script src="lib/3js/libs/tween.min.js"></script>
+
+<script src="lib/minpubsub.js"></script>
+
+<script src="lib/chess.js"></script>
+<script src="lib/kcharts_core.js"></script>
+<script src="lib/kcharts_buttons.js"></script>
+<script src="lib/kcharts_chessboard.js"></script>
+
+
+<script src="simpleviewer.js"></script>
+<script src="scripts/script_overlay.js"></script>

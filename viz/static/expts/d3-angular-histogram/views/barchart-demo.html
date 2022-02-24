@@ -1,0 +1,14 @@
+<div class='infobox'>
+  <h2>Synchronized Bar-charts with Menu-filter</h2>
+  <p>D3, Angular, crossfilter and some dummy json data are used to create a filter-menu enabling the progressive filtering of the data by selected dimensions. Barcharts, courtesy of NVD3 are used to display the data. Use the green filter button to drill down through the data, with the bar-graphs reflecting this change. You can also apply a filter by clicking on the bars.</p>
+</div>
+<chart-group dataURL='data/test_data.json'>
+  <div filter-menu ng-if='data' data='data'></div>
+  <div class='row'>
+    <!-- <klinechart-filter class='col-md-12' data='data' value='baacoefficient' y-axis='order' x-axis='baacoefficient' height='250'></klinechart-filter> -->
+    <kbarchart class='col-md-3' data='data' col='type'></kbarchart>
+    <kbarchart class='col-md-3' data='data' col='product_family'></kbarchart>
+    <kbarchart class='col-md-3' data='data' col='product_subgroup'></kbarchart>
+    <div kbarchart class='col-md-3' data='data' col='foofactor'></div>
+  </div>
+</chart-group>

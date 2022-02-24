@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="lib/kcharts_composer.css" type="text/css" media="screen" />
+<style>
+  #intro h1{
+  text-align:center;
+  }
+  .col.text, .row.text{
+  <!-- font-weight:bold; -->
+  }
+  rect.square{
+  fill:white;
+  }
+
+  #colorbar{
+  opacity:0;
+  }
+
+</style>
+<div class='container'>
+  <div id='intro'>
+    <h1>Visualising Key Chess Squares by Piece</h1>
+    <p>This is part of a series, using the 135 classic chess encounters between Garry Kasparov and Anatoly Karpov (predominantly over the 1980s-90s) as a data-set.<br />
+      During a chess game, squares are occupied and held, sometimes contested bloodily. Not all squares on the chessboard are of equal strategic significance (central squares tend to confer more power) but each piece sees the board differently. For example bishops tend to like to hang out on second rank corner squares such as 'h2' where, nestled in a protective pawn cluster, they can command one of the long diagonals. <br />
+      To see which squares were most significant both in aggregate and by piece, all 135 chess games were processed and for each square a record kept of occupation by piece and color. Initially the squares' sizes are adjusted to reflect the total occupation time over all games. By clicking one of the chess pieces below the board you can filter by piece. Here we use a color-scale from red (white pieces) to blue (black pieces) to indicate the relative time of occupation.</p>
+    Note the difference between the two boards, reflecting the different shape to the games depending on which player played white (made the initial move). Pressing on the king shows that piece spending almost all its time on the kings-side, column 'g'. This reflects both players invariable kings-side castle. Note how the bishops tend to occupy those all important corner-diagonals while the knights' key squares are more central, reflecting, among other things, their more localised scope of movement.
+    </p>
+  </div>
+  <div id="canvas" class='xdev'>
+    <div id="kasp-box" class='not-svg'>
+      <h2>Kasparov White</h2>
+      <div id="left-board" class='expand'></div>
+    </div>
+    <div id="karp-box" class='not-svg'>
+      <h2>Karpov White</h2>
+      <div id="right-board" class='expand'></div>
+    </div>
+  </div>
+</div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="lib/kcharts.js"></script>
+<script src="lib/kcharts_composer.js"></script>
+
+<script src="scripts/script_squares.js"></script>

@@ -1,0 +1,26 @@
+<link rel='stylesheet' href='/static/styles/demos/css3.css'>
+<chart-group dataURL='data/test_data.json'>
+  <h1 id='main'>3D Embedded Active Charts</h1>
+  <div filter-menu ng-if='data' data='data'></div>
+  <div class='row'>
+    <!-- <div klinechart-bdk class='col-md-12' data='data' value='baacoefficient' y-axis='order' x-axis='baacoefficient' height='250'></div> -->
+    <viewer3d height='800' fullScreen class='col-md-12'>
+      <!-- <dataplane pos='[-1000, 800, 0]' > -->
+      <dataplane pos='[-1000, 800, 0]' >
+        <kbarchart class='col-md-3' data='data' col='type'></kbarchart>
+        <kbarchart class='col-md-3' data='data' col='product_family'></kbarchart>
+        <kbarchart class='col-md-3' data='data' col='product_subgroup'></kbarchart>
+        <kbarchart class='col-md-3' data='data' col='foofactor'></kbarchart>
+      </dataplane>
+      <dataplane pos='[1000, 0, 0]' orientation='vertical' padding='20'>
+        <khist2d data='data' class='col-md-3' xKey='type' yKey='foofactor' countKey='baacoefficient' activeAxes='true' height='375'></khist2d>
+        <khist2d data='data' class='col-md-3' xKey='product_subgroup' yKey='foofactor' countKey='baacoefficient' activeAxes='true' height='375'></khist2d>
+        <khist2d  data='data' class='col-md-3' xKey='product_family' yKey='foofactor' countKey='baacoefficient' activeAxes='true' height='375'></khist2d>
+      </dataplane>
+      <dataplane pos='[-800, -500, 0]' >
+        <kpiechart class='col-md-2' data='data' col='type' height='300'></kpiechart>
+        <kpiechart class='col-md-2' data='data' col='product_family' height='300'></kpiechart>
+      </dataplane>
+    </viewer3d>
+  </div>
+</chart-group>

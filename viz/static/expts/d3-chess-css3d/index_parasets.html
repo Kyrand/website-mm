@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="lib/d3.parsets.css" type="text/css" media="screen" />
+<style>
+  #intro{
+  <!-- padding:0 10px 0 10px; -->
+  <!-- border:1px solid #333; -->
+  <!-- background:peachpuff; -->
+  margin-bottom:10px;
+  }
+  #intro h1{
+  text-align:center;
+  }
+
+  #console h2{
+  text-align:center;
+  }
+
+  .expand{
+  left:0; right:0; bottom:0;
+  }
+
+  .dimension tspan.name{
+  font-size:0.9em;
+  }
+</style>
+<div class="container">
+  <div id="intro">
+  <h1>Using Parallel Sets to Visualise Historic Chess Series</h1>
+
+  <p>Kasparov and Karpov played epic series of encounters during the 80s and 90s, 135 games in all, during which Kasparov rose to the status of greatest player of all time (FIDE rankings). As part of an ongoing series, I wanted to try and visualise the aggregate of these games, on a move by move basis. This is obviously a multi-dimensional problem, constrained by our capacity to see at most three dimensions at once, and these only by tracing movement on a two-dimensional retina.</br>
+  Various visual methods have been proposed to capture multi-dimensional data, of which parallel sets is a relatively recent addition (see <a href="http://eagereyes.org/parallel-sets">here</a>). It's generally used for categorical data, e.g. the famous Titanic passenger list, but it struck me that it could be used to show game development, with the moves as parallel, sequential dimensions and the categories the moves made at that point (here width of the bars indicates the relative frequency of the move). Luckily for me, there is a brilliant D3 implementation of Parallel Sets by Jason Davies (see <a href="http://www.jasondavies.com/parallel-sets/">here</a>, which helped matters considerably.</br>
+    Kasparov or Karpov playing white gives two sets, clearly showing a difference in the opening lines. For Kasparov we see two dominant opening lines by move 3 (ply 6), the Ruy Lopez (Spanish Opening) e2-e4, Nf3-Nc6, Bb5, invariably countered by Karpov with a6, the Morphy Defence, and the Nimzo-Indian defence with d4-Nf6, c4-e6, Nc3-Bb4. Karpov is more predictable with his first move, usually d4, but instead of following the Nimzo-Indian at d4-Nf6, c4- Kasparov chooses g6, the King's Indian Defence usually followed by Nc3-d5, the Gruenfeld Defence.
+    <br />
+    I am reasonably happy with the visualisation's ability to capture the general currents of the games' openings. There's tweaking required for the categorical ordering to emphasise the continuity of lines of play, but overall it does seem to communicate the gist. It would be interesting to compare some other classic Chess series, Fischer-Spassky for example.
+  </p>
+  </div>
+    <div id="move-options"></div>
+  <div id='console'>
+    <div id="kasp-box">
+      <h2>Kasparov White</h2>
+      <div id="left-psets" class='expand'></div>
+    </div>
+    <div id="karp-box">
+      <h2>Karpov White</h2>
+      <div id="right-psets" class='expand'></div>
+    </div>
+  </div>
+</div>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+<script src="lib/3js/renderers/CSS3DRenderer.js"></script>
+<script src="lib/3js/controls/TrackballControls.js"></script>
+<script src="lib/3js/libs/tween.min.js"></script>
+
+<script src="lib/minpubsub.js"></script>
+
+<script src="lib/chess.js"></script>
+<script src="lib/kcharts_core.js"></script>
+<script src="lib/kcharts.js"></script>
+<script src="lib/kcharts_buttons.js"></script>
+<script src="lib/kcharts_chessboard.js"></script>
+
+<script src="lib/kcharts_composer.js"></script>
+
+<script src="lib/d3.parsets.js"></script>
+
+<!-- <script src="simpleviewer.js"></script> -->
+<script src="scripts/script_parasets.js"></script>
