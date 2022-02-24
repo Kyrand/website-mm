@@ -15,7 +15,7 @@ In order to present their data on discrimination against Asian-Americans in the 
 
 I hadn't come across LayerCake, surprisingly, but was intrigued. Some basic exploration pursuaded me that it was worth further effort and using it for the first time would make crafting the charts an invigorating experience. Having built the charts in the (fairly tight) time available, I'm convinced it's a great addition to any Svelte datavizzer's armoury. 
 
-You can check out the finished site [here](http://https://staatus-index.laaunch.org/). Here's a brief run-down of the charts produced: 
+You can check out the finished site [here](https://staatus-index.laaunch.org/). Here's a brief run-down of the charts produced: 
 
 ## Barchart with dropdown triggered transitions
 ![bar chart](/images/viz/re_laaunch-bar.png)
